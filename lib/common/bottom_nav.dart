@@ -49,7 +49,7 @@ class BottomNav extends StatelessWidget {
                   duration: const Duration(milliseconds: 300),
                   curve: Curves.easeInCubic,
                   width: dotSize * 3,
-                  height: dotSize,
+                  height: 3,
                   decoration: BoxDecoration(
                       color: kSecondary,
                       borderRadius: BorderRadius.circular(10),

@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:telebirr/common/bottom_nav.dart';
 import 'package:telebirr/screens/explore/explore.dart';
 import 'package:telebirr/screens/home/home.dart';
+import 'package:telebirr/screens/menu/menu.dart';
+import 'package:telebirr/screens/profile/profile.dart';
 import 'package:telebirr/screens/rewards/rewards.dart';
 
 void main() {
@@ -40,7 +42,9 @@ class AppPageState extends State<AppPage> {
   final List<Widget> _pages = [
     const Home(),
     RewardsPage(),
-    ExploreScreen(),
+    const ExploreScreen(),
+    const ProfilePage(),
+    const MenuPage(),
   ];
 
   void changePage(int index) {

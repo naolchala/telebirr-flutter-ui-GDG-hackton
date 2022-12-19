@@ -9,39 +9,37 @@ class ServicesLink extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: kPadding),
-      child: Column(
-          children: services.asMap().entries.map((serviceEntry) {
-        var index = serviceEntry.key;
-        var service = serviceEntry.value;
-        return Column(
-          children: [
-            ListTile(
-              leading: Icon(
-                service.icon,
-                color: kPrimary,
-              ),
-              title: Text(
-                service.title,
-                style: Theme.of(context)
-                    .textTheme
-                    .titleMedium
-                    ?.copyWith(fontSize: 18),
-              ),
-              trailing: Icon(
-                Icons.chevron_right,
-              ),
-              onTap: () {},
+    return Column(
+        children: services.asMap().entries.map((serviceEntry) {
+      var index = serviceEntry.key;
+      var service = serviceEntry.value;
+      return Column(
+        children: [
+          ListTile(
+            leading: Icon(
+              service.icon,
+              color: kPrimary,
             ),
-            Divider(
-              color: index < services.length - 1
-                  ? Theme.of(context).dividerColor
-                  : Colors.transparent,
+            title: Text(
+              service.title,
+              style: Theme.of(context)
+                  .textTheme
+                  .titleMedium
+                  ?.copyWith(fontSize: 18),
             ),
-          ],
-        );
-      }).toList()),
-    );
+            trailing: const Icon(
+              Icons.chevron_right,
+            ),
+            onTap: () {},
+            onLongPress: () {},
+          ),
+          Divider(
+            color: index < services.length - 1
+                ? Theme.of(context).dividerColor
+                : Colors.transparent,
+          ),
+        ],
+      );
+    }).toList());
   }
 }

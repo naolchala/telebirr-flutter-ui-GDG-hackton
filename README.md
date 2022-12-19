@@ -1,16 +1,32 @@
-# telebirr
+# Telebirr
 
-A new Flutter project.
+Telebirr UI design developed in Flutter
 
-## Getting Started
+-   Design From: GDG UI hackaton winner [Hiwot Bogale](https://www.linkedin.com/in/hiwotbogale/)
 
-This project is a starting point for a Flutter application.
+# Pages
 
-A few resources to get you started if this is your first Flutter project:
+## Home
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![Home](docs/home.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Rewards
+
+![Rewards](docs/rewards.png)
+
+## Explore
+
+![Rewards](docs/explore.png)
+
+and More pages available on the app
+if you wanna see them clone the repo the run the app 🤣
+
+> I'm tired of screenshoting and editing and posting them here
+
+#
+
+#
+
+### Developed By Naol
+
+### &copy; Dec. 2022

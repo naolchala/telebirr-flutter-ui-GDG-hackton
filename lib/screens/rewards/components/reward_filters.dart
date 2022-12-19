@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:telebirr/util/constants.dart';
 
 class RewardFilter extends StatefulWidget {
@@ -15,6 +16,7 @@ class RewardFilter extends StatefulWidget {
 
 class _RewardFilterState extends State<RewardFilter> {
   int _selected = 0;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -43,6 +45,7 @@ class _RewardFilterState extends State<RewardFilter> {
               });
             },
             child: AnimatedContainer(
+              curve: Curves.easeInOut,
               duration: const Duration(milliseconds: 300),
               padding: const EdgeInsets.symmetric(
                 horizontal: kPadding,
@@ -51,11 +54,21 @@ class _RewardFilterState extends State<RewardFilter> {
               decoration: BoxDecoration(
                   color: index == _selected ? kPrimary : Colors.transparent,
                   borderRadius: BorderRadius.circular(20)),
-              child: Text(
-                filter,
-                style: TextStyle(
-                    color: index == _selected ? Colors.white : Colors.black,
-                    fontSize: 16),
+              child: AnimatedDefaultTextStyle(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                style: _selected == index
+                    ? TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: GoogleFonts.ptSans().fontFamily)
+                    : TextStyle(
+                        color: Colors.black,
+                        fontSize: 16,
+                        fontFamily: GoogleFonts.ptSans().fontFamily,
+                      ),
+                child: Text(filter),
               ),
             ),
           );

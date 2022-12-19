@@ -8,9 +8,8 @@ class UserCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 80,
-      padding: const EdgeInsets.symmetric(horizontal: kPadding),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [

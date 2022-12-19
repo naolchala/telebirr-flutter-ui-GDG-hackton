@@ -39,34 +39,36 @@ class Home extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            UserCard(),
-            MoneyStatus(),
-            TransactionTypes(),
-            Container(
-              margin: const EdgeInsets.symmetric(
-                  horizontal: kPadding, vertical: kPadding),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "Favorite Links",
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                  TextButton(
-                    onPressed: () {},
-                    child: Text(
-                      "See all",
-                      style: TextStyle(fontSize: 17),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: kPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              UserCard(),
+              MoneyStatus(),
+              TransactionTypes(),
+              Container(
+                margin: const EdgeInsets.symmetric(vertical: kPadding),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Favorite Links",
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
-                  ),
-                ],
+                    TextButton(
+                      onPressed: () {},
+                      child: Text(
+                        "See all",
+                        style: TextStyle(fontSize: 17),
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            ServicesLink(),
-          ],
+              ServicesLink(),
+            ],
+          ),
         ),
       ),
     );

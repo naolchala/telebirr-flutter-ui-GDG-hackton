@@ -10,8 +10,9 @@ class MoneyStatus extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAlias,
-      margin:
-          const EdgeInsets.symmetric(vertical: kPadding, horizontal: kPadding),
+      margin: const EdgeInsets.symmetric(
+        vertical: kPadding,
+      ),
       decoration: BoxDecoration(
         color: kPrimary,
         borderRadius: BorderRadius.circular(10),
