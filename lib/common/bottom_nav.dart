@@ -48,7 +48,7 @@ class BottomNav extends StatelessWidget {
                 child: AnimatedContainer(
                   duration: const Duration(milliseconds: 300),
                   curve: Curves.easeInCubic,
-                  width: dotSize,
+                  width: dotSize * 3,
                   height: dotSize,
                   decoration: BoxDecoration(
                       color: kSecondary,

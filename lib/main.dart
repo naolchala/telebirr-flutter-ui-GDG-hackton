@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:telebirr/common/bottom_nav.dart';
+import 'package:telebirr/screens/explore/explore.dart';
 import 'package:telebirr/screens/home/home.dart';
 import 'package:telebirr/screens/rewards/rewards.dart';
 
@@ -39,6 +40,7 @@ class AppPageState extends State<AppPage> {
   final List<Widget> _pages = [
     const Home(),
     RewardsPage(),
+    ExploreScreen(),
   ];
 
   void changePage(int index) {

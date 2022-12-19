@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:telebirr/util/constants.dart';
 import 'package:telebirr/util/reward_model.dart';
+
+import 'components/reward_filters.dart';
 
 class RewardsPage extends StatelessWidget {
   RewardsPage({super.key});
@@ -50,6 +50,7 @@ class RewardsPage extends StatelessWidget {
                       itemBuilder: ((context, index) {
                         var pkg = rewards[index];
                         return ListTile(
+                          onTap: () {},
                           title: Row(
                             children: [
                               Text(
@@ -79,7 +80,6 @@ class RewardsPage extends StatelessWidget {
                             "${pkg.price} ETB",
                             style: TextStyle(fontSize: 18),
                           ),
-                          onTap: () {},
                         );
                       }),
                       separatorBuilder: ((context, index) => Divider()),
@@ -90,70 +90,6 @@ class RewardsPage extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class RewardFilter extends StatefulWidget {
-  const RewardFilter({
-    Key? key,
-    required this.types,
-  }) : super(key: key);
-
-  final List<String> types;
-
-  @override
-  State<RewardFilter> createState() => _RewardFilterState();
-}
-
-class _RewardFilterState extends State<RewardFilter> {
-  int _selected = 0;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: kPadding * 2),
-      padding: EdgeInsets.all(kPadding * 1 / 2),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(40),
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 2),
-            color: kPrimary.withOpacity(0.2),
-            blurRadius: 10,
-          ),
-        ],
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: widget.types.asMap().entries.map((e) {
-          String filter = e.value;
-          int index = e.key;
-          return GestureDetector(
-            onTap: () {
-              setState(() {
-                _selected = index;
-              });
-            },
-            child: AnimatedContainer(
-              duration: Duration(milliseconds: 300),
-              padding: const EdgeInsets.symmetric(
-                horizontal: kPadding,
-                vertical: kPadding * 0.25,
-              ),
-              decoration: BoxDecoration(
-                  color: index == _selected ? kPrimary : Colors.transparent,
-                  borderRadius: BorderRadius.circular(20)),
-              child: Text(
-                filter,
-                style: TextStyle(
-                    color: index == _selected ? Colors.white : Colors.black,
-                    fontSize: 16),
-              ),
-            ),
-          );
-        }).toList(),
       ),
     );
   }
